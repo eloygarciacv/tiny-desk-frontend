@@ -1,5 +1,5 @@
-const ITEMS_API_URL = "https://tiny-desk-backend.vercel.app/items";
-const COMMENTS_API_URL = "https://tiny-desk-backend.vercel.app/comments";
+const ITEMS_API_URL = "https://tiny-desk-backend2.onrender.com/items";
+const COMMENTS_API_URL = "https://tiny-desk-backend2.onrender.com/comments";
 
 function getCommentTimestamp(createdAt) {
   if (!createdAt) {
