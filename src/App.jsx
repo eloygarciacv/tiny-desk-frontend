@@ -2,6 +2,7 @@ import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Activity from "./pages/Activity";
 import HomePage from "./pages/HomePage";
 import ItemDetails from "./pages/ItemDetails";
+import RandomPage from "./pages/RandomPage";
 
 function App() {
   return (
@@ -37,6 +38,16 @@ function App() {
                   isActive ? "text-primary" : "text-muted-foreground"
                 }`
               }
+              to="/random"
+            >
+              Random
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `ml-5 text-xs font-medium uppercase tracking-[0.16em] transition-colors hover:text-primary ${
+                  isActive ? "text-primary" : "text-muted-foreground"
+                }`
+              }
               to="/activity"
             >
               Activity
@@ -47,6 +58,7 @@ function App() {
         <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/random" element={<RandomPage />} />
             <Route path="/activity" element={<Activity />} />
             <Route path="/:videoId" element={<ItemDetails />} />
           </Routes>
